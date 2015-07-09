@@ -4,24 +4,24 @@
  *~-------------------------------------------------------------------------~~*/
 
 /*!
- * \file Example.h
+ * \file example.h
  * \authors bergen
  * \date Initial file creation: Jul 09, 2015
  */
 
 #include <iostream>
 
-#include "Example.h"
+#include "example.h"
 
-void Example::print()
+void example::print()
 {
     std::cerr << "Hello World" << std::endl;
-} // Example::method
+} // example::method
 
 /*
-void Example::method(argument_type & t)
+void example::method(argument_type & t)
 {
-} // Example::method
+} // example::method
 */
 
 /*~------------------------------------------------------------------------~--*

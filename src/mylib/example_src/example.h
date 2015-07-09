@@ -3,42 +3,42 @@
  * All rights reserved.
  *~--------------------------------------------------------------------------~*/
 
-#ifndef Example_h
-#define Example_h
+#ifndef example_h
+#define example_h
 
 /*!
- * \file Example.h
+ * \file example.h
  * \authors bergen
  * \date Initial file creation: Jul 09, 2015
  */
 
 /*!
-    \class Example Example.h
-    \brief Example provides...
+    \class example example.h
+    \brief example provides...
  */
-class Example
+class example
 {
 public:
 
     //! Default constructor
-    Example() {}
+    example() {}
 
     //! Copy constructor (disabled)
-    Example(const Example &) = delete;
+    example(const example &) = delete;
 
     //! Assignment operator (disabled)
-    Example & operator = (const Example &) = delete;
+    example & operator = (const example &) = delete;
 
     //! Destructor
-     ~Example() {}
+     ~example() {}
 
-    void print();
+    static void print();
 
 private:
 
-}; // class Example
+}; // class example
 
-#endif // Example_h
+#endif // example_h
 
 /*~-------------------------------------------------------------------------~-*
  * Formatting options for Emacs and vim.
