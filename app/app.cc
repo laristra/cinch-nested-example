@@ -3,10 +3,13 @@
 
 #include <iostream>
 
+//#include <example_src/Example.h>
+#include <Example.h>
+
 int main(int argc, char ** argv) {
-    std::cerr << "Hello World" << std::endl;
 
     return 0;
 } // main
+
 /*~------------------------------------------------------------------------~--*
  *~------------------------------------------------------------------------~--*/

@@ -32,35 +32,9 @@ public:
     //! Destructor
      ~Example() {}
 
-#if 0
-    // This is an example of defining a method with Doxygen
-    // documentation.  You should delete this example if
-    // you don't need it.  Please remove or edit this section
-    // before you add the file to a merge request.
-
-    /*!
-        \brief This method does...
-
-        \param arg0 a value that I pass in...
-        \param arg1 a value that I pass in...
-
-        \return an integer with...
-
-        This method does something useful...
-     */
-    int methodA(double arg0, double arg1) {
-        return 0;
-    } // methodA
-#endif // if 0
+    void print();
 
 private:
-
-    // Aggregate data members
-#if 0
-    // This is an example data member.  You should delete
-    // this definition.
-    double val_;
-#endif // if 0
 
 }; // class Example
 

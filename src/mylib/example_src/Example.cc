@@ -9,13 +9,16 @@
  * \date Initial file creation: Jul 09, 2015
  */
 
-#include <Example.h>
+#include <iostream>
 
-/*
-void Example::method(argument_type & t)
+#include "Example.h"
+
+void Example::print()
 {
+    std::cerr << "Hello World" << std::endl;
 } // Example::method
 
+/*
 void Example::method(argument_type & t)
 {
 } // Example::method
