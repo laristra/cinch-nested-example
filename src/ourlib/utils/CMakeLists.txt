@@ -4,21 +4,21 @@
 #~----------------------------------------------------------------------------~#
 
 # Add header files
-set(example_src_HEADERS
-  example.h
+set(utils_HEADERS
+  utils.h
   PARENT_SCOPE
 )
 
 # Add source files
-set(example_src_SOURCES
-  example.cc
+set(utils_SOURCES
+  utils.cc
   PARENT_SCOPE
 )
 
 # Add unit test
-if(ENABLE_UNIT_TESTS)
-  cinch_add_unit(example_unit example_unit.cc)
-endif(ENABLE_UNIT_TESTS)
+#if(ENABLE_UNIT_TESTS)
+#  cinch_add_unit(example_unit example_unit.cc)
+#endif(ENABLE_UNIT_TESTS)
 
 #~---------------------------------------------------------------------------~-#
 # Formatting options for vim.

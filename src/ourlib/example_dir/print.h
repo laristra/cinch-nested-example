@@ -3,8 +3,10 @@
  * All rights reserved.
  *~--------------------------------------------------------------------------~*/
 
-#ifndef mylib_example_h
-#define mylib_example_h
+#ifndef ourlib_print_h
+#define ourlib_print_h
+
+#include <iostream>
 
 /*!
  * \file example.h
@@ -12,12 +14,13 @@
  * \date Initial file creation: Jul 09, 2015
  */
 
-namespace mylib {
+namespace ourlib {
 
 /*!
     \class example example.h
     \brief example provides...
  */
+template<typename T>
 class example
 {
 public:
@@ -34,15 +37,17 @@ public:
     //! Destructor
      ~example() {}
 
-    static void print();
+    static void print() {
+        std::cerr << "Hello Mars!" << std::endl;
+    } // print
 
 private:
 
 }; // class example
 
-} // namespace mylib
+} // namespace ourlib
 
-#endif // mylib_example_h
+#endif // ourlib_print_h
 
 /*~-------------------------------------------------------------------------~-*
  * Formatting options for Emacs and vim.

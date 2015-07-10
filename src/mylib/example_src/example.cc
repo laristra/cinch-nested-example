@@ -10,19 +10,16 @@
  */
 
 #include <iostream>
-
 #include "example.h"
+
+namespace mylib {
 
 void example::print()
 {
     std::cerr << "Hello World" << std::endl;
 } // example::method
 
-/*
-void example::method(argument_type & t)
-{
-} // example::method
-*/
+} // namespace mylib
 
 /*~------------------------------------------------------------------------~--*
  * Formatting options for Emacs and vim.

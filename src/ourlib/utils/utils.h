@@ -3,46 +3,46 @@
  * All rights reserved.
  *~--------------------------------------------------------------------------~*/
 
-#ifndef mylib_example_h
-#define mylib_example_h
+#ifndef ourlib_utils_h
+#define ourlib_utils_h
 
 /*!
- * \file example.h
+ * \file utils.h
  * \authors bergen
  * \date Initial file creation: Jul 09, 2015
  */
 
-namespace mylib {
+namespace ourlib {
 
 /*!
-    \class example example.h
-    \brief example provides...
+    \class utils utils.h
+    \brief utils provides...
  */
-class example
+class utils
 {
 public:
 
     //! Default constructor
-    example() {}
+    utils() {}
 
     //! Copy constructor (disabled)
-    example(const example &) = delete;
+    utils(const utils &) = delete;
 
     //! Assignment operator (disabled)
-    example & operator = (const example &) = delete;
+    utils & operator = (const utils &) = delete;
 
     //! Destructor
-     ~example() {}
+     ~utils() {}
 
     static void print();
 
 private:
 
-}; // class example
+}; // class utils
 
-} // namespace mylib
+} // namespace ourlib
 
-#endif // mylib_example_h
+#endif // ourlib_utils_h
 
 /*~-------------------------------------------------------------------------~-*
  * Formatting options for Emacs and vim.
