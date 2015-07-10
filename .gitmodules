@@ -1,3 +1,6 @@
 [submodule "cinch"]
 	path = cinch
 	url = git@gitlab.lanl.gov:ngc-utils/cinch.git
+[submodule "ngclib"]
+	path = ngclib
+	url = git@gitlab.lanl.gov:ngc/ngclib.git
