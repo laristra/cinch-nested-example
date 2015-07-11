@@ -22,7 +22,7 @@ cinch_add_library_target("ourlib" "src/ourlib")
 # Add subprojects
 #------------------------------------------------------------------------------#
 
-cinch_add_subproject("ngclib")
+cinch_add_subproject("ngclib" "testlib")
 
 #~---------------------------------------------------------------------------~-#
 # Formatting options for emacs and vim.
