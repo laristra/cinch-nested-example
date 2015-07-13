@@ -4,9 +4,9 @@
  *~-------------------------------------------------------------------------~~*/
 
 #include <iostream>
-#include <example.h>
-#include <print.h>
-#include <upart.h>
+#include <example_src/example.h>
+#include <example_dir/print.h>
+#include <util/upart.h>
 
 int main(int argc, char ** argv) {
 
