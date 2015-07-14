@@ -6,7 +6,7 @@
 #include <iostream>
 #include <mylib/example_src/example.h>
 #include <ourlib/example_dir/print.h>
-#include <util/upart.h>
+#include <testlib/util/upart.h>
 
 int main(int argc, char ** argv) {
 
