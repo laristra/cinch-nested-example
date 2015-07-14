@@ -4,8 +4,8 @@
  *~-------------------------------------------------------------------------~~*/
 
 #include <iostream>
-#include <example_src/example.h>
-#include <example_dir/print.h>
+#include <mylib/example_src/example.h>
+#include <ourlib/example_dir/print.h>
 #include <util/upart.h>
 
 int main(int argc, char ** argv) {
