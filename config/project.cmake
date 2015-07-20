@@ -28,6 +28,12 @@ cinch_add_subproject("ngclib" LIBRARIES "testlib")
 # Select all libraries from a subproject
 #cinch_add_subproject("ngclib")
 
+#------------------------------------------------------------------------------#
+# Set header suffix regular expression
+#------------------------------------------------------------------------------#
+
+set(CINCH_HEADER_SUFFIXES "\\.h|\\.hh")
+
 #~---------------------------------------------------------------------------~-#
 # Formatting options for emacs and vim.
 # vim: set tabstop=4 shiftwidth=4 expandtab :
