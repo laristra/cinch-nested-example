@@ -17,7 +17,7 @@ set(example_src_SOURCES
 
 # Add unit test
 if(ENABLE_UNIT_TESTS)
-  cinch_add_unit(example_unit example_unit.cc)
+  cinch_add_unit(example_unit SOURCES example_unit.cc)
 endif(ENABLE_UNIT_TESTS)
 
 #~---------------------------------------------------------------------------~-#
