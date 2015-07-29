@@ -3,4 +3,4 @@
 	url = ../cinch.git
 [submodule "ngclib"]
 	path = ngclib
-	url = ../ngclib.git
+	url = ../../ngc/ngclib.git
