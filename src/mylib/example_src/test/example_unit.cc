@@ -16,24 +16,19 @@ TEST(example_unit, example1) {
     MPI_Comm_size(MPI_COMM_WORLD, &size);
 
     std::cout << "Rank " << rank << " of " << size << std::endl;
+    
+    int value = 1;
+    int result = 0;
+
+    MPI_Reduce(&value, &result, 1, MPI_INT, MPI_SUM, 0, MPI_COMM_WORLD);
+
+    if(rank == 0) {
+        ASSERT_EQ(result, size);
+    }
 
     /* Test Logic: See 'Google Test Macros' section below. */
 
 } // TEST
-
-# if 0 /* Remove guards to create more tests */
-TEST(example_unit, testname) {
-
-    /* Test Logic: See 'Google Test Macros' section below. */
-
-} // TEST
-
-TEST(example_unit, testname) {
-
-    /* Test Logic: See 'Google Test Macros' section below. */
-
-} // TEST
-#endif // if 0
 
 /*----------------------------------------------------------------------------*
  * Google Test Macros
