@@ -4,8 +4,18 @@
  *~--------------------------------------------------------------------------~*/
 
 #include <gtest/gtest.h>
+#include <mpi.h>
+#include <iostream>
 
 TEST(example_unit, example1) {
+
+    int rank;
+    int size;
+
+    MPI_Comm_rank(MPI_COMM_WORLD, &rank);
+    MPI_Comm_size(MPI_COMM_WORLD, &size);
+
+    std::cout << "Rank " << rank << " of " << size << std::endl;
 
     /* Test Logic: See 'Google Test Macros' section below. */
 
