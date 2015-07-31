@@ -20,7 +20,6 @@ if(ENABLE_UNIT_TESTS)
   cinch_add_unit(example_unit
     SOURCES test/example_unit.cc
     LIBRARIES mylib)
-
 endif(ENABLE_UNIT_TESTS)
 #if(ENABLE_UNIT_TESTS)
 #  cinch_add_unit(example_unit
