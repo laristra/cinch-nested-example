@@ -17,8 +17,18 @@ set(example_src_SOURCES
 
 # Add unit test
 if(ENABLE_UNIT_TESTS)
-  cinch_add_unit(example_unit SOURCES test/example_unit.cc)
+  cinch_add_unit(example_unit
+    SOURCES test/example_unit.cc
+    LIBRARIES mylib)
+
 endif(ENABLE_UNIT_TESTS)
+#if(ENABLE_UNIT_TESTS)
+#  cinch_add_unit(example_unit
+#    SOURCES test/example_unit.cc
+#    LIBRARIES mylib
+#    EXECUTION_POLICY parallel
+#    THREADS 1 2 4 256)
+#endif(ENABLE_UNIT_TESTS)
 
 #~---------------------------------------------------------------------------~-#
 # Formatting options for vim.
