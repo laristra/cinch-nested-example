@@ -24,9 +24,7 @@ TEST(example_unit, example1) {
 
     if(rank == 0) {
         ASSERT_EQ(result, size);
-    }
-
-    /* Test Logic: See 'Google Test Macros' section below. */
+    } // if
 
 } // TEST
 
