@@ -15,8 +15,8 @@ cinch_add_application_directory("app")
 # Add library targets
 #------------------------------------------------------------------------------#
 
-cinch_add_library_target("mylib" "src/mylib")
-cinch_add_library_target("ourlib" "src/ourlib")
+cinch_add_library_target(mylib src/mylib)
+cinch_add_library_target(ourlib src/ourlib)
 
 #------------------------------------------------------------------------------#
 # Add subprojects
