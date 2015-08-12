@@ -8,7 +8,7 @@
 
 #include <iostream>
 
-#include <testlib/util/upart.h>
+#include <simple/util/upart.h>
 
 /*!
  * \file example.h
@@ -41,7 +41,7 @@ public:
 
     static void print() {
         std::cerr << "Hello Mars!" << std::endl;
-        std::cerr << "Hello testlib! " << util::times_two(6.0) << std::endl;
+        std::cerr << "Hello simple! " << util::times_two(6.0) << std::endl;
     } // print
 
 private:
