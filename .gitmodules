@@ -1,6 +1,6 @@
 [submodule "cinch"]
 	path = cinch
 	url = ../cinch.git
-[submodule "ngclib"]
-	path = ngclib
-	url = ../../ngc/ngclib.git
+[submodule "simple"]
+	path = simple
+	url = ../cinch-example.git

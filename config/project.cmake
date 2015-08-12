@@ -23,7 +23,7 @@ cinch_add_library_target(ourlib src/ourlib)
 #------------------------------------------------------------------------------#
 
 # Select specific libraries from a subproject
-cinch_add_subproject("ngclib" LIBRARIES "testlib")
+cinch_add_subproject("simple" LIBRARIES "simple")
 
 # Select all libraries from a subproject
 #cinch_add_subproject("ngclib")
