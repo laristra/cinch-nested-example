@@ -16,11 +16,16 @@ set(example_src_SOURCES
 )
 
 if(ENABLE_UNIT_TESTS)
+
   cinch_add_unit(example_unit
     SOURCES test/example_unit.cc
     LIBRARIES mylib
     POLICY MPI
     THREADS 1 2 4)
+
+  cinch_add_unit(io
+    SOURCES test/io.cc)
+
 endif(ENABLE_UNIT_TESTS)
 
 #~---------------------------------------------------------------------------~-#
