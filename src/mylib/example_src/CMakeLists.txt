@@ -24,7 +24,8 @@ if(ENABLE_UNIT_TESTS)
     THREADS 1 2 4)
 
   cinch_add_unit(io
-    SOURCES test/io.cc)
+    SOURCES test/io.cc
+    INPUT test/io.blessed)
 
 endif(ENABLE_UNIT_TESTS)
 
