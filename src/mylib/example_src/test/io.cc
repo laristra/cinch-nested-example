@@ -8,9 +8,9 @@
 
 TEST(io, basic) {
 
-    CINCH_TEST_STREAM() << "This is some test output" << std::endl;
+    CINCH_CAPTURE() << "This is some test output" << std::endl;
 
-    ASSERT_TRUE(CINCH_TEST_EQUAL_BLESSED("io.blessed"));
+    ASSERT_TRUE(CINCH_EQUAL_BLESSED("io.blessed"));
 
 } // TEST
 
