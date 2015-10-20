@@ -3,7 +3,7 @@
  * All rights reserved.
  *~--------------------------------------------------------------------------~*/
 
-#include <gtest/gtest.h>
+#include <cinchtest.h>
 #include <mpi.h>
 #include <iostream>
 
