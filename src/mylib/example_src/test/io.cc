@@ -9,8 +9,7 @@
 TEST(io, basic) {
 
     CINCH_CAPTURE() << "This is some test output" << std::endl;
-
-    ASSERT_TRUE(CINCH_EQUAL_BLESSED("io.blessed")) << CINCH_DUMP();
+    CINCH_ASSERT(TRUE, CINCH_EQUAL_BLESSED("io.blessed"));
 
 } // TEST
 
