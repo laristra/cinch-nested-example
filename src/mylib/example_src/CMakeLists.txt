@@ -25,7 +25,7 @@ if(ENABLE_UNIT_TESTS)
 
   cinch_add_unit(io
     SOURCES test/io.cc
-    INPUT test/io.blessed)
+    INPUTS test/io.blessed)
 
 endif(ENABLE_UNIT_TESTS)
 
