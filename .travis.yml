@@ -1,0 +1,41 @@
+language: cpp
+
+sudo: false
+
+addons:
+  apt:
+    sources:
+      - ubuntu-toolchain-r-test
+      - george-edison55-precise-backports
+    packages:
+      - ccache
+      - cmake
+      - cmake-data
+      - libopenmpi-dev
+      - openmpi-bin
+      - gcc-4.9
+      - g++-4.9
+
+before_install:
+ - for i in cinch simple simple/cinch; do git -C $i submodule init && git -C $i submodule update; done
+ - git fetch --unshallow && git fetch --tags #for versioning
+
+env: #maybe add mpich later
+  global:
+    - CCACHE_CPP2=yes
+    - GVER=4.9
+  matrix:
+    - MPI=ON
+    - MPI=OFF
+
+script:
+  - mkdir build && cd build && 
+    PATH="/usr/lib/ccache:$PATH" CC=gcc-${GVER} CXX=g++-${GVER} cmake -DENABLE_MPI=$MPI -DENABLE_UNIT_TESTS=ON .. && 
+    make -j4 && make test ARGS="-V" && make install DESTDIR="${HOME}"
+
+cache:
+  directories:
+    - $HOME/.ccache
+
+compiler:
+  - gcc
