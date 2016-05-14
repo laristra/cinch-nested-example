@@ -12,6 +12,7 @@ set(example_src_HEADERS
 # Add source files
 set(example_src_SOURCES
   example.cc
+  add.f90
   PARENT_SCOPE
 )
 
@@ -25,8 +26,8 @@ cinch_add_unit(io
   SOURCES test/io.cc
   INPUTS test/io.blessed)
 
-#cinch_add_unit(fortran
-#  SOURCES test/fortran_test.pf
+#cinch_add_unit(add
+#  SOURCES test/testAdd.pf
 #  POLICY FORTRAN)
 
 #~---------------------------------------------------------------------------~-#

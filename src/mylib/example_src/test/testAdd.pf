@@ -1,0 +1,11 @@
+@test
+subroutine testAdd()
+   use add_mod
+   use pfunit_mod
+   implicit none
+
+   @assertEqual(3., add(1.,2.))
+
+end subroutine testAdd
+
+! vim: set tabstop=3 shiftwidth=3 expandtab filetype=fortran :
