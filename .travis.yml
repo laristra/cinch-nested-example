@@ -15,6 +15,7 @@ addons:
       - openmpi-bin
       - gcc-4.9
       - g++-4.9
+      - gfortran-4.9
 
 before_install:
  - for i in cinch simple simple/cinch; do git -C $i submodule init && git -C $i submodule update; done
@@ -30,12 +31,11 @@ env: #maybe add mpich later
 
 script:
   - mkdir build && cd build && 
-    PATH="/usr/lib/ccache:$PATH" CC=gcc-${GVER} CXX=g++-${GVER} cmake -DENABLE_MPI=$MPI -DENABLE_UNIT_TESTS=ON .. && 
+    FC=gfortran-${GVER} CC=gcc-${GVER} CXX=g++-${GVER} cmake -DENABLE_MPI=$MPI -DENABLE_UNIT_TESTS=ON .. && 
     make -j4 && make test ARGS="-V" && make install DESTDIR="${HOME}"
 
 cache:
-  directories:
-    - $HOME/.ccache
+  - ccache
 
 compiler:
   - gcc
