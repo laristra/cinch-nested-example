@@ -9,7 +9,7 @@ project(myproject)
 # Enable Fortran
 #------------------------------------------------------------------------------#
 
-#enable_language(Fortran)
+enable_language(Fortran)
 
 #------------------------------------------------------------------------------#
 # Set application directory
