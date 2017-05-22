@@ -13,7 +13,7 @@ add_executable(myapp app.cc)
 # Add link dependencies
 #------------------------------------------------------------------------------#
 
-target_link_libraries(myapp ${CINCH_LINK_LIBRARIES} ${EXTRA_LIBS})
+target_link_libraries(myapp simple mylib)
 
 #~---------------------------------------------------------------------------~-#
 # Formatting options for emacs and vim.

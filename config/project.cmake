@@ -8,16 +8,35 @@ cinch_minimum_required(1.0)
 project(myproject)
 
 #------------------------------------------------------------------------------#
+# If a C++11 compiler is available, then set the appropriate flags
+#------------------------------------------------------------------------------#
+
+include(cxx11)
+
+check_for_cxx11_compiler(CXX11_COMPILER)
+
+if(CXX11_COMPILER)
+    enable_cxx11()
+else()
+    message(FATAL_ERROR "C++11 compatible compiler not found")
+endif()
+
+#------------------------------------------------------------------------------#
 # Enable Fortran
 #------------------------------------------------------------------------------#
 
 enable_language(Fortran)
 
 #------------------------------------------------------------------------------#
-# Set application directory
+# Set header suffix regular expression
 #------------------------------------------------------------------------------#
 
-cinch_add_application_directory("app")
+set(CINCH_HEADER_SUFFIXES "\\.h|\\.hh")
+
+#------------------------------------------------------------------------------#
+# load cinch extras
+#------------------------------------------------------------------------------#
+cinch_load_extras()
 
 #------------------------------------------------------------------------------#
 # Add library targets
@@ -31,16 +50,16 @@ cinch_add_library_target(ourlib src/ourlib)
 #------------------------------------------------------------------------------#
 
 # Select specific libraries from a subproject
-cinch_add_subproject("simple" LIBRARIES "simple")
+cinch_add_subproject("simple")
 
 # Select all libraries from a subproject
 #cinch_add_subproject("ngclib")
 
 #------------------------------------------------------------------------------#
-# Set header suffix regular expression
+# Set application directory
 #------------------------------------------------------------------------------#
 
-set(CINCH_HEADER_SUFFIXES "\\.h|\\.hh")
+cinch_add_application_directory("app")
 
 #~---------------------------------------------------------------------------~-#
 # Formatting options for emacs and vim.
