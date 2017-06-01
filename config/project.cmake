@@ -3,7 +3,7 @@
 # All rights reserved.
 #~----------------------------------------------------------------------------~#
 
-cinch_minimum_required(1.0)
+cinch_minimum_required(2.0)
 
 project(myproject)
 
